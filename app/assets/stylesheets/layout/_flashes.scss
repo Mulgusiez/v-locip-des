@@ -1,0 +1,15 @@
+.alert {
+  font-family: 'Poiret One', cursive;
+  z-index: 2;
+  margin: 0;
+  padding-top: 60px;
+  text-align: center;
+  color: white;
+  border: none;
+}
+.alert-info {
+  background: $brand-color;
+}
+.alert-warning {
+  background: $red;
+}

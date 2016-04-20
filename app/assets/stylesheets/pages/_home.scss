@@ -2,3 +2,13 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+
+body h1, h2, h3, h4, h5, h6 {
+  color: $brand-color;
+  font-weight: 400;
+}
+
+body h1, h2, h3, h4, h5, h6, p, li, ul, a {
+  // font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', sans-serif;
+}

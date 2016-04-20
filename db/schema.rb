@@ -11,10 +11,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160419082046) do
+ActiveRecord::Schema.define(version: 20160419133843) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "annonces", force: :cascade do |t|
+    t.string   "title"
+    t.string   "street_number"
+    t.string   "route"
+    t.string   "locality"
+    t.string   "administrative_area_level_1"
+    t.string   "postal_code"
+    t.string   "country"
+    t.integer  "price"
+    t.string   "photo"
+    t.text     "description"
+    t.integer  "user_id"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  add_index "annonces", ["user_id"], name: "index_annonces_on_user_id", using: :btree
+
+  create_table "profiles", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.date     "date_of_birth"
+    t.string   "phone_number"
+    t.string   "picture"
+    t.integer  "user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "profiles", ["user_id"], name: "index_profiles_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -34,4 +65,6 @@ ActiveRecord::Schema.define(version: 20160419082046) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "annonces", "users"
+  add_foreign_key "profiles", "users"
 end

@@ -1,1 +1,28 @@
-// Your footer style
+footer {
+  padding: 15px;
+  text-align: center;
+  background-color: $brand_color;
+}
+
+.copyright {
+  color: white;
+  line-height: 20px;
+}
+
+.social-buttons li a {
+  color: white;
+  border: 2px solid white;
+  display: block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 35px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  &:hover {
+    border: 2px solid $second-brand-color;
+    color: $second-brand-color;
+  }
+}
