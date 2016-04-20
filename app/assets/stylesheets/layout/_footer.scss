@@ -22,7 +22,6 @@ footer {
   -moz-transition: all 0.5s;
   transition: all 0.5s;
   &:hover {
-    border: 2px solid $second-brand-color;
-    color: $second-brand-color;
+    background-color:  $second-brand-color;
   }
 }

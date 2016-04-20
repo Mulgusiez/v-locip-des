@@ -21,26 +21,28 @@
     </div>
     <div class="row">
       <% @annonces.each do |annonce| %>
-      <div class="col-md-4 card">
-        <div class="photo">
-          <%= image_tag('vintage_bike_on_wood.jpg', class: 'img-responsive') %>
-        </div>
-        <div class="description">
-          <div class="row">
-            <div class="col-md-12">
-              <h4 class="title"><%= annonce.title %></h4>
+        <%= link_to annonce_path(annonce) do %>
+          <div class="col-md-4 card">
+            <div class="photo">
+              <%= image_tag(image_path(annonce.photo), class: 'img-responsive') %>
+            </div>
+            <div class="description">
+              <div class="row">
+                <div class="col-md-12">
+                  <h4 class="title"><%= annonce.title %></h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <p class="locality"><%= annonce.locality %></p>
+                </div>
+                <div class="col-md-6">
+                  <p class="price"><%= annonce.price %> €</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-6">
-              <p class="locality"><%= annonce.locality %></p>
-            </div>
-            <div class="col-md-6">
-              <p class="price"><%= annonce.price %> €</p>
-            </div>
-          </div>
-        </div>
-      </div>
+        <% end %>
       <% end %>
     </div>
   </div>

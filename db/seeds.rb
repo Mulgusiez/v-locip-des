@@ -1,3 +1,8 @@
+puts 'Cleaning Previous Seeds'
+
+Annonce.delete_all
+User.delete_all
+
 augustin = User.new(email: 'mulliez.augustin@gmail.com', password: 'vélocipède')
 
 10.times do
@@ -10,6 +15,7 @@ augustin = User.new(email: 'mulliez.augustin@gmail.com', password: 'vélocipède
     postal_code:      "59000",
     country:          "France",
     price:  100,
+    photo: "image/upload/v1461167979/y06cnvywkgl2byzz526c.jpg",
     description: "Je vends mon beau vélocipède, je pars en vie, je n'en ai plus besoin."
     )
   mon_vélo.save!

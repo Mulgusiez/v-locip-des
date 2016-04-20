@@ -1,0 +1,24 @@
+<section id="annonce">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Votre annonce</h2>
+          <h3 class="section-subheading text-muted">Qu'en pensez vous ?</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 card">
+        <div class="photo">
+          <%= image_tag @annonce.photo %>
+        </div>
+        <div class="description">
+          <h4 class="title"><%= @annonce.title %></h4>
+          <p class="locality"><%= @annonce.locality %></p>
+          <p class="price"><%= @annonce.price %> €</p>
+          <hr>
+          <p class="desc"><%= @annonce.description %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
