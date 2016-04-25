@@ -2,19 +2,26 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-          <h2 class="section-heading">Votre annonce</h2>
-          <h3 class="section-subheading text-muted">Qu'en pensez vous ?</h3>
+          <h2 class="section-heading"><%= @annonce.title %></h2>
+          <h3 class="section-subheading text-muted">Il vous plait ?</h3>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12 card">
+      <div class="col-md-6 col-md-offset-3 card">
         <div class="photo">
-          <%= image_tag @annonce.photo %>
+          <%= image_tag @annonce.photo, class: 'img-responsive' %>
         </div>
         <div class="description">
-          <h4 class="title"><%= @annonce.title %></h4>
-          <p class="locality"><%= @annonce.locality %></p>
-          <p class="price"><%= @annonce.price %> €</p>
+          <div class="row">
+            <div class="col-md-8">
+              <h4 class="title"><%= @annonce.title %></h4>
+              <p class="locality"><%= @annonce.locality %></p>
+              <p class="locality"><%= @annonce.created_at %></p>
+            </div>
+            <div class="col-md-4">
+              <p class="price"><%= @annonce.price %> €</p>
+            </div>
+          </div>
           <hr>
           <p class="desc"><%= @annonce.description %></p>
         </div>

@@ -4,6 +4,7 @@ ruby '2.3.0'
 gem 'rails', '4.2.5.2'
 gem 'puma'
 gem 'pg'
+gem "geocoder"
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'devise'

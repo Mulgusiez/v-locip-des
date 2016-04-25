@@ -1,21 +1,26 @@
 section {
-    padding: 70px 0;
-    background-color: $gray-lighter;
-    background-image: image-url('fond_granuleux_opacity.jpg');
+  padding: 50px;
+  background-color: $gray-lighter;
+  // background-image: image-url('fond_granuleux_opacity.jpg');
 }
 
 .section-heading {
-    font-size: 45px;
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-weight: bold;
-    // text-shadow: 1px 1px 2px $brand-color;
+  font-size: 45px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: bold;
+  // text-shadow: 1px 1px 2px $brand-color;
 }
 
 .section-subheading {
-    font-size: 18px;
-    text-transform: none;
-    font-style: italic;
-    font-weight: 400;
-    margin-bottom: 50px;
+  font-size: 18px;
+  text-transform: none;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 30px;
+  // text-shadow: 2px 2px 4px #000000;
+}
+
+#sign-up .container .row div {
+  background-color: white;
 }

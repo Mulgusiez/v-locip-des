@@ -1,6 +1,6 @@
 header {
-  background: linear-gradient(-200deg, rgb(50, 50, 50) -3%, rgba(100, 100, 100, 0) 53%);
-  background-image: image-url('vintage_biker.png');
+  // background-image: image-url('vintage_biker.png'), linear-gradient(-225deg, rgba(0, 101, 168, 0.6) 0%, rgba(0, 36, 61, 0.6) 50%);
+  background: linear-gradient(-225deg, rgba(0, 101, 168, 0.6) 0%, rgba(0, 36, 61, 0.6) 50%) repeat scroll 0% 0%, transparent image-url('vintage_biker.png') repeat scroll 0% 0%;
   background-size: cover;
   background-position: center top;
   background-attachment: scroll;
@@ -10,42 +10,28 @@ header {
 
 .intro-text {
   padding-top: 40vh;
-  padding-bottom: 5vh;
+  padding-bottom: 15vh;
 }
 
 .intro-lead-in {
-  color: white;
-  font-style: italic;
-  font-size: 35px;
-  line-height: 35px;
-  margin-bottom: 5vh;
-  text-shadow: 2px 2px 4px #000000;
+  font-size: 20px;
+  line-height: 20px;
+  padding-bottom: 5vh;
 }
 
 .intro-heading {
   color: white;
   font-weight: 700;
-  font-size: 60px;
+  font-size: 40px;
   line-height: 75px;
-  margin-bottom: 10vh;
-  text-shadow: 2px 2px 4px #000000;
+  // text-shadow: 2px 2px 4px #000000;
 }
 
-.btn-circle {
-  margin-top: 5vh;
-  width: 50px;
-  height: 50px;
-  // margin-top: 15px;
-  // padding: 5px 5px;
-  border: 2px solid #fff;
-  border-radius: 100% !important;
-  font-size: 28px;
-  color: #fff;
-  background: 0 0;
-}
-
-.btn-circle:hover {
-    outline: 0;
-    color: #fff;
-    background: rgba(255,255,255,.1);
+.btn-submit {
+  background-color: $brand-color;
+  color: white;
+  &:hover {
+    color: white;
+    background-color: $second-brand-color;
+  }
 }

@@ -3,6 +3,13 @@ class AnnoncesController < ApplicationController
 
   def index
     @annonces = Annonce.all
+    @search_params = {
+      address: params.fetch(:search, {})[:query_address].to_s
+    }
+
+    @annonces = @annonces.select { |annonce| annonce.distance_from(@search_params[:address]) <= 5 } unless @search_params[:address] == ""
+    @annonces = @annonces.sort_by { |annonce| annonce.created_at }.reverse
+    @annonces = @annonces.first(6)
   end
 
   def show
@@ -25,11 +32,10 @@ class AnnoncesController < ApplicationController
   def destroy
   end
 
-
 private
 
   def annonce_params
-   params.require(:annonce).permit(:title, :price, :locality, :photo, :photo_cache)
+   params.require(:annonce).permit(:title, :price, :street_number, :route, :locality, :administrative_area_level_1, :postal_code, :country, :photo, :photo_cache, :description)
   end
 
   def set_annonce

@@ -1,2 +1,18 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<header>
+    <div class="container">
+        <div class="intro-text">
+            <h1 class="intro-heading">Trouvez votre Vélocipèdes</h1>
+            <p class="intro-lead-in">Les cycles à propulsion humaine</p>
+            <div class="row">
+            <%= simple_form_for :search, url: annonces_path, method: :get  do |form| %>
+              <div class="col-md-3 col-md-offset-4">
+                <%= form.input :query_address, as: :string, label: false , placeholder: 'Lieu de recherche', input_html: { class: "form-control", id:"user_input_autocomplete_address" } %>
+              </div>
+              <div class="col-md-1">
+                <%= form.submit "Cycle", class: 'btn btn-submit' %>
+              </div>
+            <% end %>
+            </div>
+        </div>
+    </div>
+</header>
